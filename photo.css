@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Suez One', serif;
+
+}
+
+body{
+    display:flex;
+    height:100vh;
+    width:100%;
+    align-items:center;
+    justify-content:center;
+    
+}
+
+.container{
+    width:60%;
+    height:80%;
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    justify-content:center;
+    gap:50px;
+    background:white;
+    border-radius:10px;
+    padding:30px 35px 35px;
+    box-shadow: -11px -2px 26px 16px rgba(20,14,14,0.84);
+    -webkit-box-shadow: -11px -2px 26px 16px rgba(20,14,14,0.84);
+    -moz-box-shadow: -11px -2px 26px 16px rgba(20,14,14,0.84);
+}
+
+.container > h1 {
+    font-size:22px;
+    font-weight:500px;
+    transform: translate(15%,70%)
+}
+
+.container-disable {
+    .editor-panel{
+        pointer-events:none;
+    }
+    .reset-filter{
+        pointer-events:none;
+    }
+    .save-img {
+        pointer-events:none;
+    }
+
+}
+
+.wrapper {
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    margin:20px 0;
+    height:200px;
+    gap:20px;
+    
+}
+
+.editor-panel {
+    display:flex;
+    flex-direction:column;
+    width:400px;
+    border: 1px solid black;
+    padding:15px 20px;
+   
+}
+.title{
+    display:block;
+    font-size:16px;
+    margin-bottom:12px;
+}
+.options{
+    display:flex;
+    flex-wrap: wrap;
+    gap:8px;
+}
+.options > button {
+   
+    font-size:14px;
+    padding:5px 4px;
+    color: #6C757D;
+    font-weight:bold;
+    margin-bottom:8px;
+    border-radius:3px;
+    background:#fff;
+    border:1px solid #aaa;
+    cursor:pointer;
+    
+}
+
+button.active {/*good practice to label tag elements like this */
+    background-color:blue;
+    color:white;
+}
+button:hover{
+    background-color:lightgrey;
+}
+
+
+.slider {
+    margin-top:12px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.filter-info {
+    display:flex;
+    color:#464646;
+    font-size:14px;
+    justify-content:space-between;
+}
+
+.slider > input {
+    width:100%;
+    height:5px;
+    accent-color:blue;
+}
+
+.rotate{
+    margin-top:17px;
+}
+
+
+.rotate-buttons > button {
+    padding:3px 20px;
+    border:1px solid #aaa;
+    cursor:pointer;
+    background:white;
+
+}
+
+.rotate-buttons >button:hover {
+    background-color:lightgrey;
+}
+
+
+
+.preview-image{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid black;
+    overflow:hidden;
+    
+}
+.preview-image > img {
+    height:300px;
+    width:300px;
+    border:none;
+    border-radius:10px;
+}
+
+.controls {
+    display:flex;
+    justify-content:space-between;
+}
+.controls > button {
+    padding:10px 12px;
+    border-radius:15px;
+    border: 1px solid black;
+    cursor:pointer;
+}
+.row > button {
+    padding:10px 12px;
+    border: 1px solid black;
+    color:white;
+    cursor:pointer;
+}
+.choose-image{
+    background-color:black;
+    border-radius:15px;
+}
+.save-img{
+    background-color:blue;
+    border-radius:15px;
+}
+
+.file-input{
+    display:none;
+}
+
+@media(max-width: 600px){
+    .controls{
+        display:flex;
+        flex-direction:column;
+    }
+    .controls > button {
+        height:50px;
+    }
+}
+
+@media(max-width:1100px){
+
+    body{
+        display:flex;
+        width:100%;
+        
+    }
+    .container{
+        width:100%;
+        height:1400px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:250px;
+        margin-top:400px;
+        overflow-y: auto;
+        
+    }
+    .container > h1 {
+        font-size:50px;
+        
+    }
+    .wrapper{
+        height:200px;
+        display:flex;
+        flex-direction:column;
+     
+    }
+    .controls {
+        display:flex;
+        gap:30px;
+    }
+
+}
